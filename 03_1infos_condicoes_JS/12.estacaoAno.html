@@ -1,0 +1,42 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+    De acordo com as respostas, informe qual a estação do ano correspondente.
+    */
+
+    const hemisferio = prompt(`Em qual hemisfério vc está? (N para Norte, S para Sul)`).toUpperCase()
+    const mes = prompt(`Em qual mês está? (1 para Janeiro, 2 para Fevereiro, 3 para Março...)`)
+
+    if (hemisferio == "N") {
+
+        if (mes == 1 || mes == 2 || mes == 3) {
+            document.write (`Inverno`)
+        }
+        else if (mes == 4 || mes == 5 || mes == 6) {
+            document.write ("Primavera")
+        }
+        else if (mes == 7 || mes == 8 || mes == 9) {
+            document.write ("Verão")
+        }
+        else if (mes == 10 || mes == 11 || mes == 12) {
+            document.write ("Outono")
+        }
+    } 
+    else if (hemisferio == "S") {
+
+if (mes == 7 || mes == 8 || mes == 9) {
+    document.write (`Inverno`)
+}
+else if (mes == 10 || mes == 11 || mes == 12) {
+    document.write ("Primavera")
+}
+else if (mes == 1 || mes == 2 || mes == 3) {
+    document.write ("Verão")
+}
+else if (mes == 4 || mes == 5 || mes == 6) {
+    document.write ("Outono")
+}
+} 
+
+</script>

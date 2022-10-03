@@ -1,0 +1,17 @@
+<script>
+    let quantosNumeros = Number(prompt(`Quantos números vc quer insirir?`));
+
+    let numeros = [0, 1];
+
+    for (let calculoVezes = 2; calculoVezes < quantosNumeros; calculoVezes++) {
+
+        let penultimoNumero = numeros[numeros.length - 2];
+        let ultimoNumero = numeros[numeros.length - 1];
+
+        let soma = penultimoNumero + ultimoNumero;
+
+        numeros.push(soma);
+    }
+
+    document.write(numeros.join(`, `));
+</script>

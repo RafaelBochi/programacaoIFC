@@ -1,0 +1,43 @@
+<script>
+    //Problema: Loja de veículos
+    //Crie os seguintes arrays:
+    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    // let carrosHatch = ["308", "Focus", "i30"];
+    
+    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    //Apresente a lista final de cada tipo de veículo.
+
+    let categorias = ["1-SUV", "2-Sedan", "3-Hatch"];
+    let veiculo1 = prompt(`Informe um veiculo`);
+    let marca1 = parseInt(prompt(`Qual a marca do veiculo 1? (` + categorias.join + `)`));
+    let veiculo2 = prompt(`Informe um veiculo`);
+    let marca2 = parseInt(prompt(`Qual a marca do veiculo 2? (` + categorias.join + `)`));
+    let veiculo3 = prompt(`Informe um veiculo`);
+    let marca3 = parseInt(prompt(`Qual a marca do veiculo 3? (` + categorias.join + `)`));
+    
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    if (marca1 === 1) carrosSUV.push(veiculo1);
+    else if (marca1 === 2) carrosSedan.push(veiculo1);
+    else if (marca1 === 3) carrosHatch.push(veiculo1);
+    else alert("Marca do veiculo 1 não disponivel");
+
+    if (marca2 === 1) carrosSUV.push(veiculo2);
+    else if (marca2 === 2) carrosSedan.push(veiculo2);
+    else if (marca2 === 3) carrosHatch.push(veiculo2);
+    else alert("Marca do veiculo 2 não disponivel");
+
+    if (marca3 === 1) carrosSUV.push(veiculo3);
+    else if (marca3 === 2) carrosSedan.push(veiculo3);
+    else if (marca3 === 3) carrosHatch.push(veiculo3);
+    else alert("Marca do veiculo 3 não disponivel");
+
+    document.write(`Carros SUV: ${carrosSUV.join(", ")}<br>`);
+    document.write(`Carros Sedan: ${carrosSedan.join(", ")}<br>`)
+    document.write(`Carros Hatch: ${carrosHatch.join(", ")}<br>`)
+
+</script>

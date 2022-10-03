@@ -1,0 +1,68 @@
+<script>
+    /*
+    //PROBLEMA: Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+const numero1 = Number(prompt("Digite um número"));
+
+const numero2 = Number(prompt("Digite um número"));
+
+const operacao = (prompt("Digite qual operação vc quer? (A - Adição ; S - Subtração ; M - Multiplicação ; D - Divisão)")).toUpperCase();
+
+
+let calculo;
+
+switch (operacao){
+    case "A":
+        calculo = numero1 + numero2;
+        break;
+        case "S":
+        calculo = numero1 - numero2;
+        break;
+        case "M":
+        calculo = numero1 * numero2;
+        break;
+        case "D":
+        calculo = numero1 / numero2;
+        break;
+}
+
+let mensagem = `Resultado: ${calculo} <br>`;
+
+const calculoPouN =  calculo * -1 ;
+console.log(calculoPouN);
+
+switch (calculo % 2){
+    case 0:
+        mensagem += "Par <br>";
+    break;
+    default:
+            mensagem += "Ímpar <br>";
+    break;
+}
+
+switch (calculoPouN + calculo){
+    case 0:
+    mensagem += "Negativo <br>";
+    break;
+    default:
+    mensagem += "Positivo <br>";
+    break;
+}
+
+switch (calculo - parseInt(calculo)){
+    case 0:
+        mensagem += "Inteiro <br>";
+    break;
+    default:
+            mensagem += "Decimal <br>";
+    break;
+}
+
+document.write (mensagem)
+
+
+</script>
